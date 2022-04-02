@@ -7,7 +7,7 @@ jobs:
   - bash: echo "Hello world"
   
  
-- job: myJob
+- job: myJob_2
   timeoutInMinutes: 10
   pool:
     vmImage: 'windows-latest'
