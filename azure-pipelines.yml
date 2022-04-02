@@ -1,15 +1,9 @@
 jobs:
-- job: myJob
+- job: jobA
   timeoutInMinutes: 10
-  pool:
-    vmImage: 'ubuntu-latest'
-  steps:
-  - bash: echo "Hello world"
-  
- 
-- job: myJob_2
-  timeoutInMinutes: 10
-  pool:
-    vmImage: 'windows-latest'
-  steps:
-  - bash: echo "Hello worldwindows"
+  cancelTimeoutInMinutes: 2
+  strategy:
+    maxParallel: 2
+    matrix: { string: { string: matrix } }
+
+  pool: Local
