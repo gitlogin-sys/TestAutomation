@@ -2,13 +2,13 @@ jobs:
 - job: myJob
   timeoutInMinutes: 10
   pool:
-  name: Local
+    vmImage: 'Local'
   steps:
   - bash: echo "Hello world"
  
 - job: myJob_
   timeoutInMinutes: 10
   pool:
-  name: Local
+    vmImage: 'Local'
   steps:
   - bash: echo "Hello world 2"
